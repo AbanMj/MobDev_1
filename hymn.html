@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Hymn of PUP</title>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="navbar">
+                <img src="pup_logo.png" class="logo">
+                
+                <ul>
+                    <li><a href="#"> HOME </a> </li>
+                    <li><a href="#"> ABOUT PUP </a> </li>
+                    <li><a href="#"> ACADEMIC </a> </li>
+                    <li><a href="#"> STUDENT </a> </li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="left"> 
+                    <h1>PUP Hymn <br> (Imno ng PUP)</h1>
+                    <p style=font-size:20px;> <i>S. Calabig, S. Roldan, and R. Amaranto</i></p>
+                    <audio controls>
+                        <source src="Imno_ng_PUP.mp3" type="audio/mp3">
+                    </audio> 
+                </div>
+                <div class="right">
+                    <div id="main">
+                        <p class="para" id="para1" style="margin-top: 100%">
+                        <br>Sintang Paaralan<br>
+                        Tanglaw ka ng bayan<br>
+                        Pandayan ng isip ng kabataan<br>
+                        Kami ay dumating nang salat sa yaman<br>
+                        Hanap na dunong ay iyong alay<br>
+                        Ang layunin mong makatao<br>
+                        Dinarangal ang Pilipino<br>
+                        Ang iyong aral, diwa, adhikang taglay<br>
+                        PUP, aming gabay<br>
+                        Paaralang dakila<br>
+                        PUP, pinagpala<br>
+                        Gagamitin ang karunungan<br>
+                        Mula sa iyo, para sa bayan<br>
+                        Ang iyong aral, diwa, adhikang taglay<br>
+                        PUP, aming gabay<br>
+                        Paaralang dakila<br>
+                        PUP, pinagpala<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <audio id="song">
+            <source src="Imno_ng_PUP.mp3" type="audio/mp3">
+        </audio>
+  
+    </body>
+</html>
+
+
+<script>
+    
+    var scrollText = document.querySelector('.para');
+
+// Make text visible
+    scrollText.style.visibility = 'visible';
+
+// Scroll text up
+    var scrollDistance = 1;
+    var scrollInterval = setInterval(function() {
+      scrollDistance += 1;
+      scrollText.style.transform = 'translateY(-' + scrollDistance + 'px)';
+      if (scrollDistance >= scrollText.offsetHeight) {
+        clearInterval(scrollInterval);
+      }
+    }, 100);
+</script>
